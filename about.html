@@ -29,13 +29,15 @@
        
         <div id="about-container">
             <h2>Om projektet</h2>
-            <p>Det här är min lösning för Laboration 2 i kursen Backend-utveckling. Tanken var att skapa en webbtjänst för att hantera en meritförteckning.</p>
+            <p>Det här är min lösning för Laboration 3 i kursen Backend-utveckling. Tanken var att skapa en webbtjänst för att hantera en meritförteckning.</p>
 
             <h3>Hur det funkar</h3>
-            <p>Projektet är uppdelat i två delar.</p>
+            <p>Projektet är uppbyggt av följande tekniker:</p>
             <ul>
-                <li>Backend: En Node.js-server med Express. Allt sparas i en SQLite-databas (via better-sqlite3)</li>
-                <li>Frontend: Byggd med Vite, SASS och JavaScript. All data skickas och hämtas med Fetch-anrop. Jag använder async/await för att hantera kommunikationen utan att sidan behöver laddas om.</li>
+                <li>Backend: En Node.js-server med Express.</li>
+                <li>Databas: MongoDB Atlas används för att lagra data.</li>
+                <li>Mongoose: Används som ODM (Object Data Modeling) för att definiera scheman och kommunicera med databasen.</li>
+                <li>Frontend: Byggd med Vite, SASS och JavaScript. All data skickas och hämtas med Fetch-anrop.</li>
             </ul>
 
             <h3>API-Slutpunkter</h3>
@@ -47,9 +49,10 @@
             </ul>
 
             <h3>Slutsats</h3>
-            <p>Det var intressant och väldigt lärorikt att göra en webbtjänst från grunden. Jag lärde mig mycket om hur man bygger en API och hur man hanterar data mellan frontend och backend.
-                Stötte på problem när jag försökte använda port 5000, men efter lite forskande så lärde jag mig att Mac använder port 5000 för AirPlay. Bytte till port 3000 istället och det löste problemet.
-                Kul att få alla olika saker man har lärt sig att fungera ihop. 
+            <p>Den största skillnaden i den här laborationen jämfört med laboration 2 är hur datan lagras, att använda ett ODM och göra en modell för hur datan ska lagras istället för SQL-frågor.
+                Jag har också fått öva på asynkrona anrop, och hur viktigt det är att använda de konsekvent när man hanterar svaren från en databas.
+                Behövde även uppdatera frontenden för att hantera MongoDB:s <code>_id</code>. </p>
+                <p>Överlag kändes det smidigare att använda än tidigare lösningar.</p>
             </p>
         </div>
 
