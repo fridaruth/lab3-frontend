@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/scss/main.scss">
+    <title>CV</title>
+</head>
+
+<body>
+    <main>
+    <h1>Om sidan</h1>
+
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="/">Hem</a>
+            </li>
+            <li>
+                <a href="/add">Lägg till</a>
+            </li>
+            <li>
+                <a href="/about" class="active">Om</a>
+            </li>
+        </ul>
+    </nav>
+    
+       
+        <div id="about-container">
+            <h2>Om projektet</h2>
+            <p>Det här är min lösning för Laboration 2 i kursen Backend-utveckling. Tanken var att skapa en webbtjänst för att hantera en meritförteckning.</p>
+
+            <h3>Hur det funkar</h3>
+            <p>Projektet är uppdelat i två delar.</p>
+            <ul>
+                <li>Backend: En Node.js-server med Express. Allt sparas i en SQLite-databas (via better-sqlite3)</li>
+                <li>Frontend: Byggd med Vite, SASS och JavaScript. All data skickas och hämtas med Fetch-anrop. Jag använder async/await för att hantera kommunikationen utan att sidan behöver laddas om.</li>
+            </ul>
+
+            <h3>API-Slutpunkter</h3>
+            <ul>
+                <li><code>GET /workexperience</code> - Hämta alla jobb</li>
+                <li><code>POST /workexperience</code> - Sparar nytt jobb (med validering)</li>
+                <li><code>PUT /workexperience/:id</code> - Uppdaterar befintlig info</li>
+                <li><code>DELETE /workexperience/:id</code> - Ta bort ett jobb</li>
+            </ul>
+
+            <h3>Slutsats</h3>
+            <p>Det var intressant och väldigt lärorikt att göra en webbtjänst från grunden. Jag lärde mig mycket om hur man bygger en API och hur man hanterar data mellan frontend och backend.
+                Stötte på problem när jag försökte använda port 5000, men efter lite forskande så lärde jag mig att Mac använder port 5000 för AirPlay. Bytte till port 3000 istället och det löste problemet.
+                Kul att få alla olika saker man har lärt sig att fungera ihop. 
+            </p>
+        </div>
+
+    </main>
+</body>
+
+</html>

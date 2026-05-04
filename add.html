@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+</head>
+
+<body>
+
+    <h1>Lägg till erfarenhet</h1>
+    <nav class="main-nav">
+        <ul>
+            <li>
+                <a href="/">Hem</a>
+            </li>
+            <li>
+                <a href="/add" class="active">Lägg till</a>
+            </li>
+            <li>
+                <a href="/about">Om</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="error-message"></div>
+
+        <form id="add-form">
+            <div class="form-group">
+                <label for="jobtitle">Jobbtitel</label>
+                <input type="text" id="jobtitle" placeholder="t.ex. UX Designer" required>
+            </div>
+            <div class="form-group">
+                <label for="companyname">Företag:</label>
+                <input type="text" id="companyname" name="company" placeholder="t.ex. Företaget AB" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Plats:</label>
+                <input type="text" id="location" name="location" placeholder="t.ex. Stockholm" required>
+            </div>
+            <div class="form-group">
+                <label for="startdate">Startdatum:</label>
+                <input type="date" id="startdate" name="startdate" required>
+            </div>
+            <div class="form-group">
+                <label for="enddate">Slutdatum (valfritt):</label>
+                <input type="date" id="enddate" name="enddate">
+            </div>
+            <div class="form-group">
+                <label for="description">Beskrivning: </label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="">Lägg till erfarenhet</button>
+        </form>
+    </main>
+
+    <script type="module" src="/src/add.js"></script>
+
+</body>
+
+</html>

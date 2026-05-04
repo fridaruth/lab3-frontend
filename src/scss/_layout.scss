@@ -1,0 +1,169 @@
+@use "sass:color";
+@use "base" as *;
+
+
+.main-nav {
+    padding: 2rem;
+    border-bottom: 2px solid $text;
+    margin-bottom: 3rem;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        li a {
+            text-decoration: none;
+            color: $text;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+
+            &:hover {
+                color: $accent;
+                border-bottom: 2px solid $accent;
+            }
+        }
+
+        li a.active {
+            border-bottom: 2px solid $accent;
+        }
+    }
+}
+
+#experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: #fafafa;
+    }
+
+    .description {
+        margin-top: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+
+}
+
+button {
+    margin-top: auto;
+    align-self: flex-start;
+    background: none;
+    border: 1px solid $text;
+    color: $text;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: $accent;
+        color: white;
+    }
+}
+
+
+
+form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: left;
+
+    .form-group {
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid $border-color;
+        padding: 0.5rem;
+    }
+
+    label {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        color: $text;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: none;
+        background: transparent;
+        padding: 0.5rem 0;
+        font-family: inherit;
+        font-size: 1.1rem;
+        color: $text;
+        outline: none;
+
+        &::placeholder {
+            color: color.adjust($text, $alpha: -0.7);
+        }
+
+        &:focus {
+            border-bottom: 1px solid $text;
+        }
+    }
+    } 
+
+    #about-container {
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+        text-align: left;
+        
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding: 1rem 0;
+                border-bottom: 1px solid $border-color;
+                font-size: 1rem;
+
+                &::before {
+                    content: "- ";
+                    font-weight: bold;
+                }
+            }
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            font-family: 'Courier New', 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        h3 {
+            margin-top: 2rem;
+        }
+    }
+
+    .error-message {
+        color: tomato;
+    }
