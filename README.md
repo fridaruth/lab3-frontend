@@ -5,7 +5,7 @@ En webbplats för att visa och hantera arbetserfarenheter. Sidan hämtar data as
 Lösningen består av en flersidig applikation där det finns sidor för att visa listan över erfaranheter, lägga till nya samt en om-sida. 
 
 ---
-# 🔗 **[Länk](https://lab2cv.netlify.app/)**
+# 🔗 **[Länk](https://lab3cv.netlify.app/)**
 
 ## 🛠 Teknik
 * **Vite** - Build tool och dev-server.

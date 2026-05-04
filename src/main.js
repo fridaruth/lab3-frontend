@@ -1,5 +1,5 @@
 import './scss/main.scss';
-const apiUrl = "https://lab2-backend-v8ix.onrender.com/workexperience";
+const apiUrl = "https://lab3-2htd.onrender.com/workexperience";
 
 async function getExperiences() {
     try {
@@ -16,7 +16,7 @@ async function getExperiences() {
             <p><strong>Plats:</strong> ${work.location}</p>
             <p><strong>Period:</strong> ${work.startdate} - ${work.enddate || 'Pågående'}</p>
             <p class="description">${work.description}</p>
-            <button onclick="deleteExperience(${work.id})">Radera</button>
+            <button onclick="deleteExperience('${work._id}')">Radera</button>
             </div>
             `;
         });
